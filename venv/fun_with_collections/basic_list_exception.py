@@ -2,17 +2,14 @@
 def make_list():
     input = []
     for i in range(3):
-        try:
-            input.append(int(get_input()))
-        except ValueError:
-            print("Error, please enter a number")
+        input.append(int(get_input()))
     return input
 
 
 def get_input():
     new_num = 0
     new_num = input("Please enter a number: ")
-    if new_num < 1 or new_num > 50:
+    if int(new_num) < 1 or int(new_num) > 50:
         raise ValueError
 
     return new_num
