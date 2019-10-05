@@ -15,6 +15,9 @@ class TestList(unittest.TestCase):
         result = sort_and_search_array.search_array()
         self.assertEqual(result, -1)
 
+    def test_sort_array(self):
+        self.assertEqual(sort_and_search_array.sort_array(arr.array('i', [3,6,1,4,2])), [1,2,3,4,6])
+
 
 if __name__ == '__main__':
     unittest.main()
